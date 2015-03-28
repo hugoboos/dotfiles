@@ -1,0 +1,16 @@
+[core]
+	quotepath = false
+	excludesfile = ~/.gitignore
+	autocrlf = input
+
+[push]
+	default = simple
+
+[color]
+	ui = auto
+
+[help]
+	autocorrect = 1
+
+[include]
+	path = ~/.gitconfig.user

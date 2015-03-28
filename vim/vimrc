@@ -1,0 +1,19 @@
+syntax enable
+colorscheme jellybeans
+
+set nocompatible
+set tabstop=2
+set number
+set title
+set scrolloff=3
+set ruler
+set showmode
+set title
+
+filetype on
+
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+  set undodir=~/.vim/undo
+endif
