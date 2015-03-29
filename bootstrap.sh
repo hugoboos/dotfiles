@@ -21,4 +21,9 @@ for src in $(find * -depth 1 -name "*" -not -path "sublime/*"); do
   create_link ".dotfiles/${src}" "${HOME}/.$(basename ${src})"
 done
 
+sublimePath="${HOME}/Library/Application Support/Sublime Text 3/Packages"
+if [ -d "${sublimePath}" ]; then
+  create_link "${HOME}/.dotfiles/sublime" "${sublimePath}/User"
+fi
+
 echo "Done"
