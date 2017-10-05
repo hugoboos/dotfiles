@@ -1,16 +1,41 @@
 [core]
-	quotepath = false
-	excludesfile = ~/.gitignore
-	autocrlf = input
+  quotepath = false
+  excludesfile = ~/.gitignore
+  autocrlf = input
+
+[alias]
+  au = add -u
+  c  = commit -m
+  d  = diff
+  ds = diff --staged
+  du = diff upstream/master
+  cm = commit --amend --no-edit
+  fx = !git add -u && git cm && git p
+  f = fetch -p
+  fu = fetch -p upstream
+  ru = rebase upstream/master
+  ri = rebase -i upstream/master
+  p  = push -f
+  pu = pull-request
+  s  = stash
+  sp = stash pop
+  st = status
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [push]
-	default = simple
+  default = simple
 
 [color]
-	ui = auto
+  ui = auto
+
+[difftool]
+  prompt = false
+
+[diff]
+  tool = vimdiff
 
 [help]
-	autocorrect = 1
+  autocorrect = 1
 
 [include]
-	path = ~/.gitconfig.user
+  path = ~/.gitconfig.user
