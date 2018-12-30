@@ -4,18 +4,18 @@
   autocrlf = input
 
 [alias]
-  au = add -u
+  au = add --update
   c  = commit -m
   d  = diff
   ds = diff --staged
   du = diff upstream/master
   cm = commit --amend --no-edit
-  fx = !git add -u && git cm && git p
-  f = fetch -p
-  fu = fetch -p upstream
+  fx = !git add --update && git cm && git p
+  f  = fetch --prune
+  fu = fetch --prune upstream
   ru = rebase upstream/master
-  ri = rebase -i upstream/master
-  p  = push -f
+  ri = rebase --interactive upstream/master
+  p  = push --force
   pu = pull-request
   s  = stash
   sp = stash pop
